@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { portfolioData } from './data/portfolioData';
 import PortfolioHeader from './components/PortfolioHeader';
@@ -12,7 +11,7 @@ import { BriefcaseIcon, SummaryIcon } from './components/Icons';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-200 font-sans leading-relaxed">
+    <div className="min-h-screen text-gray-200 leading-relaxed">
       {/* Background visual effect */}
       <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
