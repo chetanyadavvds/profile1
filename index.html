@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,15 +25,340 @@
   <script type="importmap">
 {
   "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
     "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
   }
 }
 </script>
 </head>
   <body class="bg-gray-900">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <div class="min-h-screen text-gray-200 leading-relaxed">
+      <!-- Background visual effect -->
+      <div class="absolute inset-0 z-0 opacity-10">
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
+          <div 
+              class="absolute inset-0" 
+              style="
+                  background-image: radial-gradient(circle at 25% 30%, #0d9488 0%, transparent 40%),
+                                  radial-gradient(circle at 75% 70%, #2563eb 0%, transparent 40%);
+                  filter: blur(100px);
+              "
+          ></div>
+      </div>
+      
+      <main class="relative z-10 p-4 sm:p-6 md:p-8 max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-16 mt-8">
+          <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+            Chetan Yadav
+          </h1>
+          <p class="mt-4 text-xl md:text-2xl text-teal-400 font-medium">
+            Senior Oracle & Cloud DBA | Remote DBA Specialist | LinkedIn Top Voice
+          </p>
+          <div class="mt-8 flex justify-center items-center space-x-6 text-gray-400">
+            <a href="mailto:chetanyadavvds@gmail.com" class="flex items-center space-x-2 hover:text-teal-400 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span class="hidden md:inline">chetanyadavvds@gmail.com</span>
+            </a>
+            <span class="text-gray-600">|</span>
+            <a href="https://linkedin.com/in/chetanyadavvds" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 hover:text-teal-400 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              <span class="hidden md:inline">LinkedIn</span>
+            </a>
+            <span class="text-gray-600">|</span>
+            <div class="flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span class="hidden md:inline">+91-7024418775</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="mb-12">
+          <div class="flex items-center mb-6">
+            <div class="text-teal-400 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-100 tracking-wide">Professional Summary</h2>
+          </div>
+          <div class="pl-12 border-l-2 border-gray-700">
+            <p class="text-gray-300 text-lg">
+              Results-driven and certified Senior Database Administrator with over 14 years of experience architecting, optimizing, and ensuring high availability for mission-critical applications. Proven expertise in Oracle, PostgreSQL, MySQL, and NoSQL databases, with extensive hands-on experience in on-prem to cloud migrations (AWS, Azure, OCI). Demonstrated excellence in performance tuning, DR planning, and automation. Adept at leading complex projects and collaborating with cross-functional teams (SRE, QA, SDK, Product) to deliver scalable, reliable, and cost-effective solutions in fast-paced enterprise environments.
+            </p>
+          </div>
+        </section>
+        
+        <!-- Skills -->
+        <section class="mb-12">
+          <div class="flex items-center mb-6">
+            <div class="text-teal-400 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-100 tracking-wide">Core Competencies</h2>
+          </div>
+          <div class="pl-12 border-l-2 border-gray-700">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-semibold text-teal-300 mb-4">Databases</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Oracle (11g-19c)</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">PostgreSQL</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">MySQL</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">SQL Server</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">NoSQL</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Cosmos DB</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">MongoDB</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Aurora</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Cassandra</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-300 mb-4">Cloud Platforms (AWS)</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">RDS</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Aurora</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">EC2</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">S3</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">CloudWatch</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Route53</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">IAM</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">GuardDuty</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">DMS</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">VPC</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Transit Gateway</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Direct Connect</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-300 mb-4">Cloud Platforms (Azure)</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Azure SQL</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">PostgreSQL Flexible Server</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Blob Storage</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Data Factory</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">ADF</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Azure Monitor</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Key Vault</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Azure DevOps</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">ExpressRoute</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-300 mb-4">High Availability & DR</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Oracle RAC</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Data Guard</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">GoldenGate</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">MAA</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Patroni</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">repmgr</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Multi-AZ Clustering</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Azure Site Recovery</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">RTO/RPO Planning</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-300 mb-4">DevOps & IaC</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Terraform</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Ansible</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Git</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">GitLab</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Jenkins</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">CloudFormation</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">ARM Templates</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Docker</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-300 mb-4">Automation & Scripting</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Python</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Bash</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">PowerShell</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">SQL</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-300 mb-4">Monitoring & Observability</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Splunk</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">SignalFx</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Grafana</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">VividCortex</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">CloudWatch</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">OEM</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Azure Monitor</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">ELK</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Prometheus</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-300 mb-4">Security</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">WAF</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Guardrails</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Vulnerability Mgmt</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">CIS Benchmarks</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">IAM</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">RBAC</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">Backup Encryption</span><span class="bg-gray-700 text-gray-200 py-1 px-3 rounded-full text-sm font-medium">ISO27001</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="mb-12">
+          <div class="flex items-center mb-6">
+            <div class="text-teal-400 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-100 tracking-wide">Professional Experience</h2>
+          </div>
+          <div class="pl-12 border-l-2 border-gray-700">
+            <div class="space-y-8">
+              <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Sr. Consultant | Shutterfly (via Manuh Technology)</h3>
+                    <p class="text-md text-teal-400 font-semibold">Remote</p>
+                  </div>
+                  <p class="text-sm text-gray-400 whitespace-nowrap">May 2024 – Present</p>
+                </div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Led administration of PostgreSQL, MySQL, and Oracle databases, ensuring HA and scalability.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Engineered scalable AWS Aurora & RDS solutions with HA/DR, improving reliability to 99.99%.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Migrated 10TB+ PostgreSQL/Oracle DBs to AWS RDS/Aurora with zero downtime via automated pipelines.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Improved query performance by 20% and optimized storage, achieving a 15% cost reduction.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Enhanced observability with Splunk, SignalFx, and CloudWatch, reducing MTTR by 25%.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Mentored junior DBAs, providing technical guidance and contributing to their professional development.</span></li>
+                </ul>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Manager | Capgemini</h3>
+                    <p class="text-md text-teal-400 font-semibold">Remote</p>
+                  </div>
+                  <p class="text-sm text-gray-400 whitespace-nowrap">Jul 2023 – Oct 2023</p>
+                </div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Directed 20+ database engineering projects, upgrading Oracle 11g/12c → 19c across VLDBs (500GB-10TB).</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Coordinated with engineering, product, and QA stakeholders to align database strategy with business goals.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Conducted performance tuning and resource planning for projected 20% user growth.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Oversaw migration of legacy Oracle DBs to Azure PostgreSQL with DMS.</span></li>
+                </ul>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Senior DBA | Wipro (via Nityo InfoTech)</h3>
+                    <p class="text-md text-teal-400 font-semibold">Remote</p>
+                  </div>
+                  <p class="text-sm text-gray-400 whitespace-nowrap">Nov 2022 – Jul 2023</p>
+                </div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Migrated production PostgreSQL clusters from on-prem to AWS RDS with encryption and failover policies.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Supported critical workloads in a HIPAA-aligned pharmaceutical environment.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Implemented audit logging, IAM policies, and guardrails for cloud data compliance.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Designed performance tuning strategy that reduced incident volume by 35%.</span></li>
+                </ul>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Senior Oracle DBA | HCL (via Lensoft Pvt. Ltd.)</h3>
+                    <p class="text-md text-teal-400 font-semibold">Remote</p>
+                  </div>
+                  <p class="text-sm text-gray-400 whitespace-nowrap">Oct 2021 – Nov 2022</p>
+                </div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Implemented Oracle RAC and Data Guard clusters for high availability across hybrid deployments.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Led 5+ database migrations (cross-platform, non-PDB to PDB) using Data Pump, GoldenGate, and Data Guard.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Managed Oracle Maximum Availability Architecture (MAA) ensuring 99.99% uptime.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Assisted in AWS Direct Connect and Azure ExpressRoute provisioning for secure interconnectivity.</span></li>
+                </ul>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Team Lead | Clover Infotech</h3>
+                    <p class="text-md text-teal-400 font-semibold">Remote</p>
+                  </div>
+                  <p class="text-sm text-gray-400 whitespace-nowrap">Sep 2021 – Oct 2021</p>
+                </div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Designed backup, archiving, and HA for critical SQL Server and Oracle DB workloads.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Created runbooks and operational guides aligned with ITIL-based change management.</span></li>
+                </ul>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Sr. Consultant | Tenet Technologies Pvt Ltd</h3>
+                    <p class="text-md text-teal-400 font-semibold">Bhopal</p>
+                  </div>
+                  <p class="text-sm text-gray-400 whitespace-nowrap">Apr 2015 – Aug 2021</p>
+                </div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Designed and led multi-year platform modernization from on-prem to cloud (Azure/AWS).</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Delivered cloud POCs using Azure ARM Templates and Terraform modules.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Led DR drills simulating regional outages, achieving <10 min RTO.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Upgraded 50+ DB environments including patching, clustering, and security hardening.</span></li>
+                </ul>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Technical Analyst | Oracle India Pvt. Ltd.</h3>
+                    <p class="text-md text-teal-400 font-semibold">Bangalore/Noida</p>
+                  </div>
+                  <p class="text-sm text-gray-400 whitespace-nowrap">Jul 2012 – Mar 2015</p>
+                </div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Resolved performance and failover issues for enterprise cloud clients across EMEA.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Implemented PowerShell and shell automation for Oracle patching and rollback.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Participated in migration of on-prem systems to Oracle Cloud Infrastructure.</span></li>
+                </ul>
+              </div>
+              <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 class="text-xl font-bold text-white">Oracle DBA/PeopleSoft | SOAIT Solutions</h3>
+                    <p class="text-md text-teal-400 font-semibold">Bangalore</p>
+                  </div>
+                  <p class="text-sm text-gray-400 whitespace-nowrap">May 2010 – Jun 2012</p>
+                </div>
+                <ul class="mt-4 space-y-2 text-gray-300">
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Delivered secure, scalable DB infrastructure supporting enterprise business apps.</span></li>
+                  <li class="flex items-start"><span class="mr-2 mt-1 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></span><span>Created SOPs and system recovery documentation during initial cloud transitions.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="mb-12">
+          <div class="flex items-center mb-6">
+            <div class="text-teal-400 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-100 tracking-wide">Certifications</h2>
+          </div>
+          <div class="pl-12 border-l-2 border-gray-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">Oracle Certified Professional (OCP)</h3><p class="text-sm text-teal-400">Oracle</p></div>
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">Oracle Certified Associate (OCA)</h3><p class="text-sm text-teal-400">Oracle</p></div>
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">Oracle Certified Expert - SQL</h3><p class="text-sm text-teal-400">Oracle</p></div>
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">OCI Architect Associate</h3><p class="text-sm text-teal-400">Oracle Cloud</p></div>
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">OCI Cloud DB Migration Specialist</h3><p class="text-sm text-teal-400">Oracle Cloud</p></div>
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">OCI AI & Foundations Certified Associate</h3><p class="text-sm text-teal-400">Oracle Cloud</p></div>
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">Oracle Autonomous Database Cloud Specialist</h3><p class="text-sm text-teal-400">Oracle Cloud</p></div>
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">AWS Certified Solutions Architect – Associate</h3><p class="text-sm text-teal-400">Amazon Web Services</p></div>
+              <div class="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50"><h3 class="font-bold text-white">Microsoft Certified Azure Administrator Associate</h3><p class="text-sm text-teal-400">Microsoft</p></div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Education -->
+        <section class="mb-12">
+          <div class="flex items-center mb-6">
+            <div class="text-teal-400 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20" />
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-100 tracking-wide">Education</h2>
+          </div>
+          <div class="pl-12 border-l-2 border-gray-700">
+            <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-cyan-500/10 hover:border-cyan-700/50">
+              <h3 class="text-xl font-bold text-white">Bachelor of Engineering, Computer Science</h3>
+              <p class="text-md text-teal-400 font-semibold">RGPV University, Bhopal</p>
+              <p class="text-sm text-gray-400 mt-1">2007</p>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="border-t border-gray-700 mt-16 pt-8 text-center text-gray-400">
+          <div class="flex justify-center items-center space-x-6 mb-4">
+            <a href="mailto:chetanyadavvds@gmail.com" class="hover:text-teal-400 transition-colors" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </a>
+            <a href="https://linkedin.com/in/chetanyadavvds" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+            </a>
+            <a href="tel:+91-7024418775" class="hover:text-teal-400 transition-colors" aria-label="Phone">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            </a>
+          </div>
+          <p id="copyright">&copy; 2024 Chetan Yadav. All rights reserved.</p>
+        </footer>
+      </main>
+    </div>
+    <script>
+      document.getElementById('copyright').innerHTML = `&copy; ${new Date().getFullYear()} Chetan Yadav. All rights reserved.`;
+    </script>
   </body>
 </html>
